@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>我的课程</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/common.css">
+    <script src="js/flexible_css.js"></script>
+    <script src="js/flexible.js"></script>
+</head>
+<body>
+<div class="container">
+<div class="middle-box">
+    <div class="middle-wrap">
+        <ul class="article-list mt20">
+            <li ontouchend="window.location.href='course_detail.html';" class="mb20">
+                <div class="article-wrap">
+                    <div><img src="img/sample_List.jpg" alt=""></div>
+                    <div class="article-content">
+                        <p class="omit">吕志豪：赴港上市的法律风险防控</p>
+                        <p>￥99.00</p>
+                    </div>
+                </div>
+            </li>
+            <li class="mb20">
+                <div class="article-wrap">
+                    <div><img src="img/sample_List.jpg" alt=""></div>
+                    <div class="article-content">
+                        <p class="omit">吕志豪：赴港上市的法律风险防控</p>
+                        <p>￥99.00</p>
+                    </div>
+                </div>
+            </li>
+            <li class="mb20">
+                <div class="article-wrap">
+                    <div><img src="img/sample_List.jpg" alt=""></div>
+                    <div class="article-content active">
+                        <p class="omit">吕志豪：赴港上市的法律风险防控</p>
+                        <p>￥99.00</p>
+                    </div>
+                </div>
+            </li>
+            <li class="mb20">
+                <div class="article-wrap">
+                    <div><img src="img/sample_List.jpg" alt=""></div>
+                    <div class="article-content">
+                        <p class="omit">吕志豪：赴港上市的法律风险防控</p>
+                        <p>￥99.00</p>
+                    </div>
+                </div>
+            </li>
+            <li class="mb20">
+                <div class="article-wrap">
+                    <div><img src="img/sample_List.jpg" alt=""></div>
+                    <div class="article-content">
+                        <p class="omit">吕志豪：赴港上市的法律风险防控</p>
+                        <p>￥99.00</p>
+                    </div>
+                </div>
+            </li>
+            <li class="mb20">
+                <div class="article-wrap">
+                    <div><img src="img/sample_List.jpg" alt=""></div>
+                    <div class="article-content">
+                        <p class="omit">吕志豪：赴港上市的法律风险防控</p>
+                        <p>￥99.00</p>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+</div>
+<div class="footer">
+    <ul class="wp100">
+        <li>
+            <div class="img-box"><img src="img/house_MouseOut.png" alt=""></div>
+            <div>微课首页</div>
+        </li>
+        <li class="active">
+            <div class="img-box"><img src="img/course_mouseOn.png" alt=""></div>
+            <div>我的课程</div>
+        </li>
+        <li>
+            <div class="img-box"><img src="img/personal_mouseOut.png" alt=""></div>
+            <div>个人中心</div>
+        </li>
+    </ul>
+</div>
+<script src="js/jquery-1.7.1.min.js"></script>
+<script src="js/common.js"></script>
+<script>
+    $(function(){
+        //轮播图
+        $(".banner-demo").bannerSlide();
+        //全部课程显示
+        $(".all-classes").on("touchend", function(e){
+            e.stopPropagation();
+            var $this = $(this);
+            var $img = $this.children("img"),
+                $classes = $(".classes");
+            if(!$this.hasClass("active")){
+                var src = $img.prop("src").split("_")[0];
+                src += "_up.png";
+                $this.addClass("active");
+            }else{
+                var src = $img.prop("src").split("_")[0];
+                src += "_down.png";
+                $this.removeClass("active");
+            }
+            $img.prop("src", src);
+            $(".classes").toggle();
+            //绑定滚动后消失事件
+            $("body").on("touchmove", allClassesHide);
+        });
+        //选择课程后执行方法
+        $(".classes li").each(function(){
+            var $this = $(this);
+            $this.on("touchend", function(e){
+                e.stopPropagation();
+
+            });
+        });
+        //最新、最热切换
+        $(".list-title").children().each(function(){
+            var $this = $(this);
+            $this.on("touchend", function(e){
+                e.stopPropagation();
+                $this.addClass("active")
+                        .siblings().eq(0).removeClass("active");
+                allClassesHide(e);
+            });
+        });
+        $("body").on("touchend touchmove", allClassesHide);
+        //全部课程消失
+        function allClassesHide(e){
+            $(".all-classes").removeClass("active");
+            $(".classes").hide();
+            var $img = $(".all-classes").children("img");
+            var src = $img.prop("src").split("_")[0];
+            $img.prop("src", src + "_down.png");
+            //解绑滚动注册的消失事件
+            $("body").off("touchmove", allClassesHide);
+        }
+    });
+</script>
+</body>
+</html>

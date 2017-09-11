@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>课程详情</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/common.css">
+    <script src="js/flexible_css.js"></script>
+    <script src="js/flexible.js"></script>
+</head>
+<body class="bg-gray">
+<div class="info-box">
+    <div class="course-img">
+        <div><img src="img/sample_Detail01.jpg" alt="" class="wp100"></div>
+    </div>
+    <div class="course-info">
+        <div class="course-title">吕志豪：赴港上市的法律风险防控</div>
+        <div class="course-time">
+            <span>2017-08-10</span>
+            <span>季度卡剩余65天</span>
+            <div class="recommand-friend fr">推荐好友</div>
+        </div>
+        <div class="mt30 mb10"><img src="img/player.jpg" alt="" class="wp100"></div>
+    </div>
+    <div class="course-info" style="padding-top: 0px;margin-bottom: 0px;">
+        <div class="course-text">
+            <p class="cu-title">分享嘉宾</p>
+            <p class="cu-text">吕志豪律师毕业于英国东安格利亚大学及香港大学法律学院，曾任职中国银行（香港）的最高法律顾问及为多间著名中资银行提供法律服务。曾任职中国银行（香港）的最高法律顾问及为多间著名中资银行提供法律服务。曾任职中国银行（香港）的最高法律顾问及为多间著名中资银行提供法律服务。</p>
+            <p class="cu-title">课程概况</p>
+            <p class="cu-text">吕志豪律师毕业于英国东安格利亚大学及香港大学法律学院，曾任职中国银行（香港）的最高法律顾问及为多间著名中资银行提供法律服务。曾任职中国银行（香港）的最高法律顾问及为多间著名中资银行提供法律服务。曾任职中国银行（香港）的最高法律顾问及为多间著名中资银行提供法律服务。</p>
+        </div>
+    </div>
+</div>
+<div class="shadow"></div>
+<div class="buy-box square choose-course">
+    <p class="close-layer vh"><img src="img/close.png" alt="" class="fr"></p>
+    <ul class="to-pay">
+        <li class="mt15 vh">
+            <div class="fl mt20" style="height: auto;"><input type="radio" class="buy-radio" name="buy-radio"></div>
+            <div class="fl ml15 buy-type">
+                <p class="mb5">普通卡<span class="ml10">￥99.00</span></p>
+                <p>(仅该次课或该系列课程有效)</p>
+            </div>
+        </li>
+        <li class="mt15 vh">
+            <div class="fl mt20" style="height: auto;"><input type="radio" class="buy-radio" name="buy-radio"></div>
+            <div class="fl ml15 buy-type">
+                <p class="mb5">季度卡<span class="ml10">￥300.00</span></p>
+                <p>(90天无限次学习全部课程)</p>
+            </div>
+        </li>
+        <li class="mt15 vh">
+            <div class="fl mt20" style="height: auto;"><input type="radio" class="buy-radio" name="buy-radio"></div>
+            <div class="fl ml15 buy-type">
+                <p class="mb5">半年卡<span class="ml10">￥540.00</span></p>
+                <p>(180天无限次学习全部课程)</p>
+            </div>
+        </li>
+        <li class="mt15 vh">
+            <div class="fl mt20" style="height: auto;"><input type="checkbox" class="buy-checkbox" name="buy-checkbox"></div>
+            <div class="fl ml15 buy-type">
+                <p class="mb5">使用我的佣金余额支付</p>
+                <p>(余额30元，还需支付270元)</p>
+            </div>
+        </li>
+    </ul>
+    <div class="buy-course-btn small to-buy">立即购买</div>
+</div>
+<div class="buy-box small buy-success">
+    <p class="fr close-layer mr15 mt15"><img src="img/close.png" alt=""></p>
+    <p>购买成功</p>
+    <p>您现在即可学习此课程</p>
+</div>
+<div class="footer">
+    <div class="buy-course-btn big to-choose">购买课程：￥99.00</div>
+</div>
+<script src="js/jquery-1.7.1.min.js"></script>
+<script src="js/common.js"></script>
+<script>
+    $(function(){
+        //点击购买课程
+        $(".to-choose").on("touchend", function(){
+            shadowTog();
+            $(".choose-course").show();
+            $(document).on("touchmove", forbiddenDefault);
+        });
+        $(".to-pay li").each(function(){
+            var $this = $(this);
+            $this.on("touchend", function(){
+                var ifChecked = $this.find("input")[0].checked;
+                $this.find("input")[0].checked = !ifChecked;
+            });
+        });
+        //点击立即购买
+        $(".to-buy").on("touchend", function(){
+            $(".choose-course").hide();
+            $(".buy-success").show();
+        });
+        //关闭弹出层
+        $(".close-layer").on("touchend", function(){
+            $(this).parent().hide();
+            shadowTog();
+            $(document).off("touchmove", forbiddenDefault);
+        });
+        //推荐好友
+        $(".recommand-friend").on("touchend", function(){
+            window.location.href = "invitation_page.html";
+        });
+    });
+</script>
+</body>
+</html>

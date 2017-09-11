@@ -1,0 +1,320 @@
+/*
+    spwk index page
+*/
+
+/*container*/
+.container{
+    width: 100%;
+    height: 90%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+/*header*/
+.header{
+    width: 100%;
+    height: 28%;
+    overflow: hidden;
+    position: relative;
+}
+/*banner*/
+.banner-box{
+    width: 100%;
+    overflow: hidden;
+    position: absolute;
+}
+.banner-box div{
+    width: 100%;
+    display: none;
+}
+.banner-box div:first-child{display: block;}
+.banner-box img{width: 100%;}
+.dot-box{
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    overflow: hidden;
+    width: 26px;
+    margin-left: -12px;
+}
+.banner-dot{
+    width: 10px;
+    height: 10px;
+    -webkit-border-radius:10px;
+    -moz-border-radius:10px;
+    border-radius:10px;
+    background-color: #b29692;
+    float: left;
+}
+.banner-dot.active{
+    background-color: #fff;
+}
+
+
+/*middle title*/
+.middle-title{
+    width: 100%;
+    padding: 20px 0 40px 0;
+    clear: both;
+    position: relative;
+    z-index: 20;
+}
+/*left*/
+.all-classes{
+    text-align: center;
+    width: 25%;
+    height: 58px;
+    line-height: 58px;
+    background-color: #a43144;
+    border: 1px solid #72200b;
+    color: #fff;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+.classes{
+    position: absolute;
+    top: 81px;
+    width: 25%;
+    border: 1px solid #72200b;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    display: none;
+    z-index: 20;
+    background-color: #a43144;
+    font-size: 24px;
+}
+.classes li{
+    line-height: 50px;
+    color: #fff;
+    padding-left: 10px;
+}
+.classes li.active{
+    line-height: 50px;
+    color: #a43144;
+    background-color: #fff;
+}
+
+/*middle*/
+.middle-box{
+    width: 100%;
+    height: 72%;
+    position: relative;
+}
+.middle-wrap{
+    width: 96%;
+    margin: 0 2%;
+    position: relative;
+    font-size: 30px;
+}
+
+/*right*/
+.list-title{
+    color: #616161;
+    border: 1px solid #dcdcdc;
+    width: 173px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+.list-title div{
+    width: 86px;
+    float: left;
+    height: 58px;
+    line-height: 58px;
+    background-color: #f5f5f5;
+    text-align: center;
+}
+.list-title div:last-child{border-left: 1px solid #dcdcdc;}
+.list-title div.active{
+    background-color: #e1e1e1;
+}
+/*article-list*/
+.article-list{
+    width: 100%;
+    clear: both;
+    color: #333;
+
+}
+.article-list li{
+    width: 48%;
+    float: left;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    border: 1px solid #d8d8d8;
+}
+.article-list li:nth-child(2n+2){
+    margin-left: 4%;
+}
+.article-wrap{padding: 10px 10px 20px 10px;}
+.article-content p:first-child{margin: 15px 0 20px 0;}
+.article-content.active p:first-child{color: #666666;}
+.article-content p:last-child{color: #ff0000;}
+.article-list img{width: 100%;}
+
+/*文章详情*/
+.info-box{
+    height: 90%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+.course-info{
+    padding: 35px 4% 0;
+    text-align: justify;
+    justify-content:space-between;
+    background-color: #fff;
+    margin-bottom: 15px;
+}
+.course-title{
+    font-size: 48px;
+    color: #000;
+    line-height: 60px;
+}
+.course-time{
+    font-size: 36px;
+    color: #a9a9a9;
+    margin-top: 10px;
+}
+.course-time span:nth-child(2){
+    margin-left: 2%;
+    font-size: 30px;
+}
+/*推荐好友*/
+.recommand-friend{
+    font-size: 24px;
+    color: #09bb07;
+    width: 120px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    border: 1px solid #09bb07;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+.recommand-friend:hover{
+    color: #fff;
+    background-color: #09bb07;
+}
+/*具体信息*/
+.course-text{
+    font-size: 30px;
+    line-height: 48px;
+}
+.course-text .cu-title{
+    color: #2f96e6;
+    padding: 15px 0 10px;
+}
+.course-text .cu-text{color: #7f7f7f;}
+.buy-course-btn{
+    height: 75px;
+    line-height: 75px;
+    text-align: center;
+    color: #fff;
+    background-color: #09bb07;
+    font-size: 30px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    /*居中*/
+    position: absolute;
+}
+.buy-course-btn.big{
+    width: 80%;
+    margin: -37px 0 0 -40%;
+    top: 50%;
+    left: 50%;
+}
+.buy-course-btn.small{
+    width: 80%;
+    bottom: 20px;
+    margin-left: 10%;
+}
+.to-pay{margin-top: -20px;padding: 0 10%;}
+.close-layer{margin: 15px 15px 0 0;}
+/*购买radio*/
+.buy-radio{
+    width: 36px;
+    height: 36px;
+    border: 1px solid #0099ff;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border-radius: 100%;
+}
+.buy-checkbox{
+    width: 36px;
+    height: 36px;
+    border: 1px solid #0099ff;
+}
+.buy-type{font-size: 24px;}
+.buy-type p:nth-child(1){color: #333;}
+.buy-type p:nth-child(1) span{color: #ff0000;}
+.buy-type p:nth-child(2){color: #999;}
+
+/*推荐好友*/
+.save-img{
+    color: #000;
+    text-align: center;
+    font-weight: bold;
+}
+.summary-title{
+    margin: 40px 0 10px 0 ;
+    color: #72200b;
+    font-weight: bold;
+}
+.invitation-summary{color: #72200b;}
+.invitation-summary li{margin: 10px 0;}
+.invitation-summary a{color: #ff0000;}
+/*系列课程*/
+.series-title{
+    width: 100%;
+    overflow: hidden;
+    text-align: center;
+    background-color: #fff;
+    font-size: 26px;
+    color: #848ea6;
+    height: 80px;
+}
+.series-title ul{
+    width: 30%;
+    margin: 0 auto;
+}
+.series-title li{
+    float: left;
+    width: 50%;
+    line-height: 76px;
+}
+.series-title li.active{
+    border-bottom: 4px solid #09bb07;
+    color: #09bb07;
+}
+.series-info{
+    text-align: center;
+    line-height: 80px;
+    font-size: 24px;
+    color: #848ea6;
+    margin: 30px 0;
+    background-color: #fff;
+}
+/*系列课程列表*/
+.course-list{
+    font-size: 24px;
+    width: 100%;
+    color: #333;
+}
+.course-list li{
+    margin-bottom: 20px;
+    background-color: #fff;
+    overflow: hidden;
+    height: 100px;
+    line-height: 100px;
+}
+.course-list li div:nth-child(1){width: 22%;}
+.course-list li div:nth-child(2){width: 60%;}
+.course-list li div:nth-child(2) p{padding: 0 60px 0 20px;}
+.course-list li div:nth-child(4){color: #09bb07;}
+.course-list li div:nth-child(3){margin: 0 5px 0 5px;}

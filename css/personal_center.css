@@ -1,0 +1,153 @@
+/*
+    personal center
+*/
+
+.personal-box{
+    width: 100%;
+    height: 90%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    background-color: #f1f1f1;
+}
+/*personal-img*/
+.personal-img{
+    width: 100%;
+    height: 36%;
+    background: url("../img/pCenter_bg.jpg") center no-repeat;
+    background-size:cover;
+    text-align: center;
+    position: relative;
+    font-size: 28px;
+    color: #fff;
+}
+.personal-img div:nth-child(1){
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -100px 0 0 -100px;
+}
+/*gr-items*/
+.gr-items{
+    margin: 30px 0;
+    font-size: 26px;
+    background-color: #fff;
+}
+.gr-items li{
+    line-height: 85px;
+    height: 85px;
+    border-bottom: 1px solid #e8e8e8;
+    padding: 0 25px;
+}
+.gr-items li a{
+    display: block;
+    color: #444444;
+}
+.gr-items li img:nth-child(1){
+    margin-top: -5px;
+}
+.gr-items li img:nth-child(2), .gr-items li img.fr{
+    margin-top: 30px;
+}
+.quit-center{
+    display: block;
+    height: 80px;
+    line-height: 80px;
+    font-size: 26px;
+    font-weight: bold;
+    text-align: center;
+    color: #333;
+    background-color: #fff;
+}
+/*意见反馈*/
+.textarea-box{
+    width: 94%;
+    margin: 30px auto;
+}
+.fk-text{
+    width: 100%;
+    height: 270px;
+    padding: 15px;
+    background-color: #fff;
+    font-size: 24px;
+    color: #999;
+    border: 1px solid #dadada;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+/*提现中心*/
+.personal-income{
+    width: 100%;
+    background: url("../img/income_bg.jpg") no-repeat;
+    font-size: 24px;
+    color: #fff;
+    background-size: cover;
+}
+.cur-balance{
+    font-size: 36px;
+    text-align: center;
+    margin: 30px 0;
+    color: #f1f1f1;
+}
+.cur-balance span{
+    font-size: 72px;
+    color: #ffff00;
+    margin: 0 20px;
+}
+.all-income{text-align: center;}
+.all-income span{
+    color: #ffff00;
+    margin: 0 10px;
+}
+.present-application{
+    color: #f1f1f1;
+    width: 200px;
+    height: 60px;
+    line-height:60px;
+    text-align: center;
+    margin: 30px auto;
+    border: 1px solid #fff;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+/*交易记录*/
+.trade-list{
+    background-color: #fff;
+    margin-top: 30px;
+    width: 100%;
+}
+.trade-list li{
+    height: 90px;
+    border-bottom: 1px solid #e8e8e8;
+    padding: 0 15px;
+}
+.trade-list li div:nth-child(1){width: 80%;}
+.trade-list li div:nth-child(1) p{
+    font-size: 22px;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+    color: #444;
+    line-height: 55px;
+    margin-top: 3px;
+}
+.trade-list li div:nth-child(1) div{
+    margin-top: -8px;
+    font-size: 20px;
+    color: #999;
+    font-weight: normal;
+    line-height: 35px;
+}
+.trade-list li div:nth-child(2){
+    font-size: 24px;
+    color: #ff0000;
+    font-weight: bold;
+    line-height: 90px;
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>个人中心</title>
+    <link rel="stylesheet" href="css/personal_center.css">
+    <link rel="stylesheet" href="css/common.css">
+    <script src="js/flexible_css.js"></script>
+    <script src="js/flexible.js"></script>
+</head>
+<body>
+<div class="personal-box">
+    <div class="personal-img">
+        <div>
+            <img src="img/head.png" alt="" class="circle">
+            <div class="mt20">小明童鞋<img src="img/female.png" class="ml15 sex-type"></div>
+            <!--<div>小明童鞋<img src="img/male.png"></div>-->
+        </div>
+    </div>
+    <ul class="gr-items">
+        <li><a href="personal_info.html"><img src="img/ico_info.png" alt="" class="mr25">个人信息<img src="img/arrow_right.png" alt="" class="fr" width="28"></a></li>
+        <li><a href="earnings.html;"><img src="img/ico_income.png" alt="" class="mr25">我的收益<img src="img/arrow_right.png" alt="" class="fr" width="28"></a></li>
+        <li><a href="trade_record.html"><img src="img/ico_record.png" alt="" class="mr25">交易记录<img src="img/arrow_right.png" alt="" class="fr" width="28"></a></li>
+        <li><a href="feedback.html"><img src="img/ico_feedback.png" alt="" class="mr25">意见反馈<img src="img/arrow_right.png" alt="" class="fr" width="28"></a></li>
+    </ul>
+    <a href="javascript: void(0);" class="quit-center">退出登录</a>
+</div>
+<div class="shadow"></div>
+<div class="application-layer big">
+    <div class="tc to-cancel" style="line-height: 219px;"><span>确认退出登录？</span></div>
+    <div class="decide-btn">
+        <a href="javascript: void(0);">取消</a>
+        <a href="javascript: void(0);">确定</a>
+    </div>
+</div>
+<div class="footer">
+    <ul class="wp100">
+        <li>
+            <div class="img-box"><img src="img/house_MouseOut.png" alt=""></div>
+            <div>微课首页</div>
+        </li>
+        <li>
+            <div class="img-box"><img src="img/course_mouseOut.png" alt=""></div>
+            <div>我的课程</div>
+        </li>
+        <li class="active">
+            <div class="img-box"><img src="img/personal_mouseOn.png" alt=""></div>
+            <div>个人中心</div>
+        </li>
+    </ul>
+</div>
+<script src="js/jquery-1.7.1.min.js"></script>
+<script src=js/common.js></script>
+<script>
+    $(function(){
+        //确认是否退出
+        $(".quit-center").on("touchend", function(){
+            shadowTog();
+            $(".application-layer").show();
+        });
+        $(document).on("touchmove", forbiddenDefault);
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>交易记录</title>
+    <link rel="stylesheet" href="css/personal_center.css">
+    <link rel="stylesheet" href="css/common.css">
+    <script src="js/flexible_css.js"></script>
+    <script src="js/flexible.js"></script>
+</head>
+<body>
+<div class="personal-box" style="height: 100%;">
+    <ul class="trade-list">
+        <li>
+            <div style="width: 100%;">
+                <p>申请提现200元，状态：<span class="cl-green">成功！</span></p>
+                <div>2017年8月9日<span class="ml5">13:12</span></div>
+            </div>
+        </li>
+        <li>
+            <div style="width: 100%;">
+                <p>申请提现200元，状态：<span class="cl-brown">失败！</span>原因：您的微信限额</p>
+                <div>2017年8月9日<span class="ml5">13:12</span></div>
+            </div>
+        </li>
+        <li>
+            <div style="width: 100%;">
+                <p>申请提现200元，状态：<span class="cl-brown">失败！</span>原因：您的微信限额导致不能提现失败，抱歉！</p>
+                <div>2017年8月9日<span class="ml5">13:12</span></div>
+            </div>
+        </li>
+    </ul>
+    <div class="info-no-more">没有更多了</div>
+</div>
+<div class="shadow"></div>
+<div class="application-layer big">
+    <div>
+        <p>请输入提现金额</p>
+        <p><span class="rmb">￥</span><input type="text" class="present-input"></p>
+        <p>当前余额688.25，满100可提现</p>
+    </div>
+    <div class="decide-btn">
+        <a href="javascript: void(0);" class="cancel">取消</a>
+        <a href="javascript: void(0);" class="commit">确定</a>
+    </div>
+</div>
+<div class="application-layer small">
+    <p class="fr close-layer close-x"><img src="img/close.png" alt=""></p>
+    <p>余额提现申请成功</p>
+    <p>我们会在2个工作日内通过微信红包/转账到您的微信账号，请随时关注到账提醒</p>
+</div>
+<script src="js/jquery-1.7.1.min.js"></script>
+<script src=js/common.js></script>
+<script>
+    $(function(){
+        //申请提现
+        $(".present-application").on("touchend", function(){
+            shadowTog();
+            $(".application-layer.big").show();
+            $(document).on("touchmove", forbiddenDefault);
+        });
+        //确定提现
+        $(".commit").on("touchend", function(){
+            $(".application-layer.big").hide();
+            $(".application-layer.small").show();
+        });
+        //关闭弹出层
+        $(".close-layer").on("touchend", function(){
+            $(this).parent().hide();
+            shadowTog();
+            $(document).off("touchmove", forbiddenDefault);
+        });
+    });
+</script>
+</body>
+</html>
